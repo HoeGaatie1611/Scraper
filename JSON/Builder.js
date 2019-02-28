@@ -3,7 +3,7 @@ module.exports = {
         let json = {
             "Slot_Name": name,
             "Provider": provider,
-            "Release_Date": Date.parse(release),
+            "Release_Date": release,
             "Variance": variance,
             "RTP": parseFloat(RTP),
             "Betways": parseInt(betways),
@@ -16,8 +16,6 @@ module.exports = {
             "Features": features,
             "Tags": tags
         };
-
-        console.log(new Date(1305151200000));
 
         const fs = require('fs-path');
         // fs.writeFile('myjsonfile.json', jsonObject);
