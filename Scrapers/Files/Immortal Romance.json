@@ -1,0 +1,33 @@
+{
+  "Slot_Name": "Immortal Romance",
+  "Provider": "Microgaming",
+  "Release_Date": 1305151200000,
+  "Variance": "MED",
+  "RTP": 96.86,
+  "Betways": 243,
+  "Layout": "5*3",
+  "Max_Coins": 72900,
+  "Technologies": "FLASH, JS, HTML5",
+  "Min_bet": 0.01,
+  "Max_bet": 0.02,
+  "Devices": "Desktop, Tablet, Mobile",
+  "Features": [
+    "FreeSpins",
+    "Scatter symbols",
+    "Wild"
+  ],
+  "Tags": [
+    "FreeSpins",
+    "Scatter symbols",
+    "Wild",
+    "Bloodsuckers, vampires theme",
+    "Cartoons",
+    "Fantasy",
+    "Mythical, legend",
+    "Brown",
+    "Gray",
+    "Horror",
+    "Vampires",
+    "Steel"
+  ]
+}

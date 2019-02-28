@@ -1,0 +1,33 @@
+{
+  "Slot_Name": "Starburst",
+  "Provider": "NetEnt",
+  "Release_Date": 1386716400000,
+  "Variance": "LOW",
+  "RTP": 96.1,
+  "Betways": 10,
+  "Layout": "5*3",
+  "Max_Coins": 50000,
+  "Technologies": "JS HTML5",
+  "Min_bet": 0.01,
+  "Max_bet": 100,
+  "Devices": "Desktop, Tablet, Mobile",
+  "Features": [
+    "Respin Wild",
+    "Respins",
+    "Spreading Wilds or Wild Rush",
+    "Wild"
+  ],
+  "Tags": [
+    "Respin Wild",
+    "Respins",
+    "Spreading Wilds or Wild Rush",
+    "Wild",
+    "Classic style",
+    "Space",
+    "Rainbow (multicolor)",
+    "Violet",
+    "Crystals",
+    "Glass",
+    "Jewelry"
+  ]
+}

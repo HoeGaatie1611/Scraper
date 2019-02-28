@@ -1,0 +1,30 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "Scraper voor het afstuderen Jesse Tijsma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "webpack"
+  },
+  "author": "Jesse",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cli-table": "^0.3.1",
+    "express": "^4.16.4",
+    "fs-path": "0.0.24",
+    "jade": "^1.11.0",
+    "kerberos": "^1.1.2",
+    "mongodb": "^3.1.13",
+    "mongodb-stitch-browser-sdk": "^4.2.0",
+    "mongodb-stitch-core-services-mongodb-remote": "^4.2.0",
+    "mongodb-stitch-server-sdk": "^4.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
