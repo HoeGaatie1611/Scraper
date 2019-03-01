@@ -1,3 +1,13 @@
-const second = require("../Scrapers/GetData.js");
+function resolveAfter2Seconds(x) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(x);
+        }, 5000);
+    });
+}
 
-second.gatherData("https://slotcatalog.com/en/slots/Monopoly-Bring-the-House-Down");
+async function f1() {
+    var x = await resolveAfter2Seconds(10);
+    console.log(x); // 10
+}
+f1();
