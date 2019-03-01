@@ -20,6 +20,11 @@ exports.gatherData = async (URL) => {
 
                 let release = $("span.begin_date_val").eq(0).text();
                 let name = $("div.divHeadName").find("h1").text();
+
+                if(String(name).includes(":")) {
+                    name = String(name).replace(":", " -");
+                }
+
                 let provider = $("div.provider_item").find("span").eq(0).text();
                 let variance = $("span.variance_risk_val").eq(0).text();
                 let RTP = $("span.RTP_val").eq(0).text();
@@ -47,6 +52,7 @@ exports.gatherData = async (URL) => {
                         return false;
                 });
 
+                console.log(provider, name, release, variance, RTP, betways, layout, maxcoins, technology, minbet, maxbet, devices, features, tags);
                 JSON.buildJson(provider, name, release, variance, RTP, betways, layout, maxcoins, technology, minbet, maxbet, devices, features, tags);
                 resolve();
             }
