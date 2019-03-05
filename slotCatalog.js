@@ -5,7 +5,7 @@ const dataGrabber = require("./Scrapers/GetData.js");
 
 // const url = "https://slotcatalog.com/en/type/Video_Slots/1";
 
-findData(1)
+findData(1);
 
 async function findData(index) {
         const url = `https://slotcatalog.com/en/type/Video_Slots/${index}`;
@@ -16,7 +16,7 @@ async function findData(index) {
                 console.log(String(found));
                 if (String(found) === "Nothing found :(") {
                     return true;
-                } else if(index === 5) {
+                } else if(index === 2) {
                     return true;
                 } else {
                     await getPage(url);

@@ -21,8 +21,12 @@ exports.gatherData = async (URL) => {
                 let release = $("span.begin_date_val").eq(0).text();
                 let name = $("div.divHeadName").find("h1").text();
 
-                if(String(name).includes(":")) {
+                if (String(name).includes(":")) {
                     name = String(name).replace(":", " -");
+                } else if (String(name).includes("?")) {
+                    name = String(name).replace("?", "");
+                } else if (String(name).includes("!")) {
+                    name = String(name).replace("!", "");
                 }
 
                 let provider = $("div.provider_item").find("span").eq(0).text();
@@ -35,6 +39,8 @@ exports.gatherData = async (URL) => {
                 let minbet = $("span.min_bet_val").eq(0).text();
                 let maxbet = $("span.max_bet_val").eq(0).text();
                 let devices = $("div.newReviewTopAttr").children().eq(13).children().eq(1).children().eq(0).text().trim();
+                let image = $("div.gameItemimg").find("img").attr("src");
+                const imageURL = `https://slotcatalog.com/${image}`
 
                 let tags = [];
                 $("div.tegs_slot_item").find("ul").children().each((index) => {
@@ -53,10 +59,22 @@ exports.gatherData = async (URL) => {
                 });
 
                 console.log(provider, name, release, variance, RTP, betways, layout, maxcoins, technology, minbet, maxbet, devices, features, tags);
-                JSON.buildJson(provider, name, release, variance, RTP, betways, layout, maxcoins, technology, minbet, maxbet, devices, features, tags);
+
+                if (checkIfEmtpy(name) && checkIfEmtpy(devices) && checkIfEmtpy(maxbet) && checkIfEmtpy(minbet) && checkIfEmtpy(technology) && checkIfEmtpy(maxcoins) && checkIfEmtpy(layout) && checkIfEmtpy(betways) && checkIfEmtpy(RTP) && checkIfEmtpy(variance) && checkIfEmtpy(provider) && checkIfEmtpy(release) && checkIfEmtpy(features) && checkIfEmtpy(tags))
+                    JSON.buildJson(provider, name, release, variance, RTP, betways, layout, maxcoins, technology, minbet, maxbet, devices, features, tags, imageURL);
+                else
+                    console.log("------------- A variable was empty -------------");
                 resolve();
             }
         });
     });
 };
 
+function checkIfEmtpy(variable) {
+    const value = String(variable);
+    if (value === "") {
+        return false
+    } else if (value.includes("Unknown")) {
+        return false
+    } else return value !== null;
+}
